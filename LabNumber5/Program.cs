@@ -12,6 +12,8 @@ namespace LabNumber5
         {
             string YesNo;
             int diceSides;
+            int dice1;
+            int dice2;
 
             Console.WriteLine("Welcome to the Grand Circus Casino! Roll the dice? (y/n) ");
             YesNo = Console.ReadLine();
@@ -22,15 +24,16 @@ namespace LabNumber5
             Console.WriteLine(diceSides + " sided die-");
             Console.WriteLine();
 
-            Random diceRoll1 = new Random();
-            int dice1 = diceRoll1.Next(1, diceSides);
-            Console.WriteLine("Dice 1: " + dice1);
+            RollDice(diceSides);
+            dice1 = diceResult;
 
-            Random diceRoll2 = new Random();
-            int dice2 = diceRoll2.Next(1, diceSides);
-            Console.WriteLine("Dice 2:" + dice2);
+        }
 
-
+        private static void RollDice(int diceSides)
+        {
+            Random diceRoll = new Random();
+            int diceResult = diceRoll.Next(1, diceSides);
+            int result = diceResult;
         }
     }
 }
